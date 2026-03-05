@@ -64,6 +64,6 @@ export default class DashboardComponent {
 
     async onLogout() {
         await this.auth.logout();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
     }
 }
