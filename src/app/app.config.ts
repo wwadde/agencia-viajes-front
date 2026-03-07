@@ -17,10 +17,6 @@ export const appConfig: ApplicationConfig = {
         cookieName: 'XSRF-TOKEN',
         headerName: 'X-XSRF-TOKEN'
       })
-    ),
-    provideAppInitializer(() => {
-      const authService = inject(AuthService);
-      return authService.checkAuth();
-    })
+    )
   ]
 };

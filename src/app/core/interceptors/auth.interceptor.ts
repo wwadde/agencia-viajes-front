@@ -1,10 +1,9 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-    // Configures all outgoing requests to include credentials (cookies)
-    // This is required to send the SESSION cookie back to the server
+    // 1. Siempre incluir credenciales (cookies de sesión)
     const modifiedReq = req.clone({
-        withCredentials: true,
+        withCredentials: true
     });
 
     return next(modifiedReq);
